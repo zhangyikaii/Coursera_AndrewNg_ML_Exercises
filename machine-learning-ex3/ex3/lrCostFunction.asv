@@ -35,24 +35,22 @@ m = length(y); % number of training examples
 %
 
 
+
+J= -1 * sum( y .* log( sigmoid(X*theta) ) + (1 - y ) .* log( (1 - sigmoid(X*theta)) ) ) / m  + lambda/(2*m) * temp' * temp ;
+grad = ( X' * (sigmoid(X*theta) - y ) )/ m + lambda/m * temp ;
+
+
 grad = zeros(size(theta));
 
 hTheta = sigmoid(X * theta);
 
-% 有带正则化项的J(\theta)(注意移除\theta_0 就是- theta(1, 1) * theta(1, 1)):
 J = sum(log(hTheta)' * (-y) - log(1 - hTheta)' * (1 - y)) / m ...
     + (theta' * theta - theta(1, 1) * theta(1, 1)) * lambda / 2 / m ;
-%%
-%for j = 1 : size(grad, 1)
-%    grad(j, 1) = (hTheta - y)' * X(:, j) / m;
-%end
 
-% 没有正则化项的grad:
-grad = (X' * (hTheta - y )) / m;
-% 加上求导后的正则化项(注意移除\theta_0)
-temp = theta; 
-temp(1) = 0;   % because we don't add anything for j = 0  
-grad = grad + temp .* (lambda / m);
+for j = 1 : size(grad, 1)
+    grad(j, 1) = (hTheta - y)' * X(:, j) / m;
+end
+
 % =============================================================
 
 grad = grad(:);

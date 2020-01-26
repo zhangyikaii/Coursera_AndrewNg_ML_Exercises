@@ -30,10 +30,12 @@ X = [ones(m, 1) X];
 %       for each row.
 %       
 
+tX = X * all_theta';
+tmpRes = max(tX, [], 2);
 
-
-
-
+for i = 1 : size(tmpRes, 1)
+    p(i, 1) = find(tmpRes(i, 1) == tX(i, :));
+end
 
 
 % =========================================================================
