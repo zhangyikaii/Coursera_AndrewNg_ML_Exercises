@@ -753,9 +753,9 @@ for symmetry breaking.
 
 ---
 
-![1580122628431](E:\Coursera_AndrewNg_ML_Exercises\Coursera_AndrewNg_ML_Exercises\assets\1580122628431.png)
+![1580122628431](./assets/1580122628431.png)
 
-![1580122665214](E:\Coursera_AndrewNg_ML_Exercises\Coursera_AndrewNg_ML_Exercises\assets\1580122665214.png)
+![1580122665214](./assets/1580122665214.png)
 
 
 
