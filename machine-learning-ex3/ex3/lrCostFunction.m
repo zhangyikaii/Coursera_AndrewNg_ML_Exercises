@@ -50,7 +50,7 @@ J = sum(log(hTheta)' * (-y) - log(1 - hTheta)' * (1 - y)) / m ...
 % 没有正则化项的grad:
 grad = (X' * (hTheta - y )) / m;
 % 加上求导后的正则化项(注意移除\theta_0)
-temp = theta; 
+temp = theta;
 temp(1) = 0;   % because we don't add anything for j = 0  
 grad = grad + temp .* (lambda / m);
 % =============================================================

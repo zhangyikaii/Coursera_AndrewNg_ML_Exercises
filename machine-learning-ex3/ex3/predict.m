@@ -21,13 +21,21 @@ p = zeros(size(X, 1), 1);
 %       can use max(A, [], 2) to obtain the max for each row.
 %
 
+X = [ones(size(X, 1), 1) X];
 
+% hidden layer 参数
+hid = sigmoid(X * Theta1');
 
+hid = [ones(size(hid, 1), 1) hid];
 
+% output layer 参数
+outp = sigmoid(hid * Theta2');
 
-
-
-
+% 最后做一个max选类别.
+tmpRes = max(outp, [], 2);
+for i = 1 : size(tmpRes, 1)
+    p(i, 1) = find(tmpRes(i, 1) == outp(i, :));
+end
 
 % =========================================================================
 
