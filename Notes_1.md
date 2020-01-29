@@ -30,7 +30,6 @@ $$
 
 
 
-
 ---
 
 第二种方法: **6:2:2, Training set : Cross validation set : test set**.
@@ -89,6 +88,10 @@ $J_{train}$不带正则惩罚项?
 
 Our decision process can be broken down as follows:
 
+**过拟合: 减少feature, 增加训练样例, 增加$\lambda$.**
+
+**欠拟合: 增加feature, 增加多项式高次, 减少$\lambda$**. (增加训练样例也可).
+
 - **Getting more training examples:** Fixes high variance
 
 - **Trying smaller sets of features:** Fixes high variance
@@ -121,3 +124,45 @@ Our decision process can be broken down as follows:
 ![1580189438820](E:\Coursera_AndrewNg_ML_Exercises\Coursera_AndrewNg_ML_Exercises\assets\1580189438820.png)
 
 上面是因为已经 high variance => overfitting 了, 变更复杂的神经网络没用.
+
+
+
+![1580222236702](E:\Coursera_AndrewNg_ML_Exercises\Coursera_AndrewNg_ML_Exercises\assets\1580222236702.png)
+
+![1580223232899](E:\Coursera_AndrewNg_ML_Exercises\Coursera_AndrewNg_ML_Exercises\assets\1580223232899.png)
+
+![1580223864397](E:\Coursera_AndrewNg_ML_Exercises\Coursera_AndrewNg_ML_Exercises\assets\1580223864397.png)
+
+![1580223461417](E:\Coursera_AndrewNg_ML_Exercises\Coursera_AndrewNg_ML_Exercises\assets\1580223461417.png)
+
+
+
+### IELTS
+
+---
+
+在判断题和heading题中不要单独用数字定位.
+
+90%情况下定位词是名词. 10%动词.
+
+1. 名词定位: 主语, 从句主语, 句末名词.
+
+常见词(比如water)，文章主旨词(**标题词**)，题干内部重复出现的词(**小题之间重复的**)，不适合做定位词
+
+**找到定位词去原文找**
+
+
+
+NG: 如果题干说的很绝对, 只有... 原文中又出现但是不那么绝对, 就NG.
+
+原文: 香蕉是已知的最古老的水果. 题干: 香蕉是已知的最古老的水果之一 (**选对**)
+
+原文: 香蕉是已知的最古老的水果之一. 题干: 香蕉是已知的最古老的水果 (**选NG**)
+
+
+
+**判断题数量规律**: Y > F > NG.
+
+判断题需要同时定位多个题, 可以两个两个定位: 1, 2定位, 2, 3定位, 3, 4定位. 来防止NG出现, 保证在一题上不会花太多时间.
+
+**判断题考点词分类**: be, can后面的通常是考点, 程度描述.
