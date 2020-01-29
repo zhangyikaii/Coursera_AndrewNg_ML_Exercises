@@ -58,17 +58,11 @@ for i = 1 : m
     ytrain = y(1 : i, :);
     
     % 一条一条样例进来, theta的训练过程(计算)需要包含之前经历过的样例.
-    % Note: X(1 : i, :), 之前的样例都要包含进来算.
+    % Note: X(1 : i, :
     theta = trainLinearReg(Xtrain, ytrain, lambda);
-    
-    % 用之前计算cost的函数来算, 同样注意
-    % notice that the learning curve is exactly the cost function with no regularization
-    [Jtrain, grad_train] = linearRegCostFunction(Xtrain, ytrain, theta, 0);
-    [Jval, grad_val] = linearRegCostFunction(Xval, yval, theta, 0);
-    
-    error_train(i, 1) = Jtrain;
-    % Note: cross validation error的cost计算中theta不断变化.
-    error_val(i, 1) = Jval;
+
+    [Jtrain, grad_train] = linearRegCostFunction(Xtrain,ytrain,theta,0);
+    [Jval, grad_val] = linearRegCostFunction(Xval,yval,theta,0);
 end
 
 
